@@ -1,1 +1,1 @@
-web: gunicorn lottopicker.wsgi
+web: gunicorn lottopicker.wsgi --log-file -
