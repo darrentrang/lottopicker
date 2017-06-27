@@ -1,3 +1,4 @@
+<!--
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -19,4 +20,48 @@
 	<form action="{% url 'about' %}">
 		<input type="submit" value="About" />
 	</form>
+</html>
+-->
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+   <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<a href="asdf" class="btn btn-default btn-sm">
+	{% load static %}
+	  <input type="image" src="{% static 'powerball_logo.png' %}" name="saveForm" class="btTxt submit" id="powerballLogo" width="561" height="127"/>
+	</a>
+</div>
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+</body>
 </html>
