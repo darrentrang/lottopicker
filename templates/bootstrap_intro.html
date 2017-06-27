@@ -571,9 +571,15 @@ marker.setMap(map);
             //infoWindow.setContent('Location found.');
             //infoWindow.open(map);
             map.setCenter(pos);
+            var custom_icon = {
+		url: "./squareLogo.png",
+		scaledSize: new google.maps.Size(30,30),
+		origin: new google.maps.Point(0,0),
+		anchor: new google.maps.Point(0,0)
+	    };
 	    marker = new google.maps.Marker({
 		map: map,
-		position: pos
+		position: custom_icon
 	    });
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
