@@ -550,6 +550,7 @@ marker.setMap(map);
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
+      var marker;
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -566,10 +567,14 @@ marker.setMap(map);
               lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
+            //infoWindow.setPosition(pos);
+            //infoWindow.setContent('Location found.');
+            //infoWindow.open(map);
             map.setCenter(pos);
+	    marker = new google.maps.Marker({
+		map: map,
+		position: pos
+	    });
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
