@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from random import randint
 
 def home(request):
 	#HttpResponse can only return text. 
@@ -38,3 +39,25 @@ def translate(request):
 
 def about(request):
 	return render(request, "about.html", {})
+
+def pick_nums(regs, ll, ul, qty):
+    if len(regs) > 0:
+        #print "Error! list must be empty. Emptying now."
+        del regs[:]
+
+    while len(regs) < qty:
+        current_pick = randint(ll, ul)
+        if current_pick in regs:
+            #print "{0} already chosen. repicking.".format(current_pick)
+            continue
+        else:
+            regs.append(current_pick)
+
+def powerball_option(request):
+	regs = []
+	pb = []
+	pick_nums(regs, 1, 69, 5)
+	pick_nums(pb, 1, 26, 1)
+	powerball = pb[0]
+	return render(request, "powerball_option.html", {'regs':regs, 'pb':powerball})
+
