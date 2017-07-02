@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,4 +25,4 @@ urlpatterns = [
     url(r'^translate/', views.translate, name="translate"),
     url(r'^about/', views.about, name="about"),
     url(r'^powerball/', views.powerball_option, name="powerball_option"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

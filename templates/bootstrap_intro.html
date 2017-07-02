@@ -109,7 +109,7 @@
 </div>
 <div style="margin: auto; width: 100%; text-align: center;">
         <div class="pb_winning_number_white_ball" id="pb_win_white_ball">
-            10
+            17
         </div>      
 </div>
 <!-- mega millions numbers -->
@@ -639,23 +639,24 @@ marker.setMap(map);
             //infoWindow.open(map);
             map.setCenter(pos);
             var custom_icon = {
-		url: "./squareLogo.png",
-		scaledSize: new google.maps.Size(30,30),
-		origin: new google.maps.Point(0,0),
-		anchor: new google.maps.Point(0,0)
-	    };
-	    marker = new google.maps.Marker({
-		map: map,
-		position: custom_icon
-	    });
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
+          		url: "squareLogo.png",
+          		scaledSize: new google.maps.Size(30,30),
+          		origin: new google.maps.Point(0,0),
+          		anchor: new google.maps.Point(0,0)
+      	    };
+      	    marker = new google.maps.Marker({
+          		map: map,
+          		position: pos,
+              icon: custom_icon
+      	    });
+                }, function() {
+                  handleLocationError(true, infoWindow, map.getCenter());
+                });
+              } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+              }
+            }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);

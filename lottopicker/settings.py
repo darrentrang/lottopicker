@@ -124,6 +124,8 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+MEDIA_URL = '/pics/'
+MEDIA_ROOT = BASE_DIR
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [

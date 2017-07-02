@@ -7,40 +7,102 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
-		#pb_win_white_ball {
-			display: inline-block;
-			text-align: center;
-			color: #333333;
-			font-family: "Times New Roman";
+		p1 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
 			font-size: 25px;
-			height: 40px;
-			width: 40px;
-			padding-top: 2px;
-			padding-left: 0px;
-			background-image: url('ball_white.gif');
-			background-repeat: no-repeat;
-			background-color: #F09581;
+			width: 100%;
+		}
+		p2 {
+			position: absolute;
+			top: 40px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p3 {
+			position: absolute;
+			top: 80px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p4 {
+			position: absolute;
+			top: 120px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p5 {
+			position: absolute;
+			top: 160px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p6 {
+			position: absolute;
+			top: 200px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		#inner {
+			display: table;
+			margin: 0 auto;
 		}
 	</style>
 </head>
 <body>  
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" />
+			<p1 align="center">{{regs.0}}</p1>
+		</div>	
+	</div>
 
-	<div class="container-fluid">
-		<div class="image">
-			<img src="ball_white.gif" alt="" />
-			<b><font size="5" background="ball_white.gif">10</font></b>
-		</div>
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" />
+			<p2 align="center">{{regs.1}}</p2>
+		</div>	
 	</div>
-	<div style="margin: auto; width: 100%; text-align: center;">
-	        <div class="pb_winning_number_white_ball" id="pb_win_white_ball">
-	            10
-	        </div>      
+
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" />
+			<p3 align="center">{{regs.2}}</p3>
+		</div>	
 	</div>
-	{% for i in regs %}
-		{{ i }}
-	{% endfor %}
-	<br />
-	{{ pb }}
+
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" />
+			<p4 align="center">{{regs.3}}</p4>
+		</div>	
+	</div>
+
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" />
+			<p5 align="center">{{regs.4}}</p5>
+		</div>	
+	</div>
+
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'ball_red.gif' %}" class="img-responsive" alt="" />
+			<p6 align="center">{{pb}}</p6>
+		</div>	
+	</div>
 
 </body>
 </html>
