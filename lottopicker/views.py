@@ -61,3 +61,11 @@ def powerball_option(request):
 	powerball = pb[0]
 	return render(request, "powerball_option.html", {'regs':regs, 'pb':powerball})
 
+def megamillions_option(request):
+	regs = []
+	mm = []
+	pick_nums(regs, 1, 75, 5)
+	pick_nums(mm, 1, 15, 1)
+	mmball = mm[0]
+	return render(request, "megamillions_option.html", {'regs':regs, 'mm':mmball})
+
