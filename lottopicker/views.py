@@ -53,6 +53,8 @@ def pick_nums(regs, ll, ul, qty):
         else:
             regs.append(current_pick)
 
+    regs.sort()
+
 def powerball_option(request):
 	regs = []
 	pb = []
