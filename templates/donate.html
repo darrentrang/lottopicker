@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+	<title>Donate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		p1 {
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p2 {
+			position: absolute;
+			top: 70px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p3 {
+			position: absolute;
+			top: 130px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p4 {
+			position: absolute;
+			top: 190px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p5 {
+			position: absolute;
+			top: 250px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		p6 {
+			position: absolute;
+			top: 310px;
+			left: 0px;
+			font-size: 25px;
+			width: 100%;
+		}
+		#inner {
+			display: table;
+			margin: 0 auto;
+		}
+		a{
+		    color: #FFFFFF;
+		    text-decoration: none;
+		}
+	</style>
+</head>
+<body style="background-color:#FFFFFF;">  
+	<div class="image-responsive">
+		<div id="inner">
+			{% load static %}
+			<img src="{% static 'venmo_qr2.jpg' %}" class="img-responsive" alt="" width="200px"/>
+			<p1 align="center">{{regs.0}}</p1>
+		</div>	
+	</div>
+
+
+	<br/>
+	<hr/>	
+	<div class="col-xs-12" align="center">
+		<a href="{% url 'home' %}"><button type="button" class="btn btn-default btn-lg">Main Menu</button></a>
+	</div>
+	
+</body>
+</html>

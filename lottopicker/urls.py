@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^$', views.home, name="home"),
     url(r'^powerball/', views.powerball_option, name="powerball_option"),
     url(r'^megamillions/', views.megamillions_option, name="megamillions_option"),
+    url(r'^donate/', views.donate, name="donate"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

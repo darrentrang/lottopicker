@@ -71,3 +71,6 @@ def megamillions_option(request):
 	mmball = mm[0]
 	return render(request, "megamillions_option.html", {'regs':regs, 'mm':mmball})
 
+def donate(request):
+	return render(request, "donate.html", {})
+
