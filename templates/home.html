@@ -23,15 +23,24 @@
         left: 50%;
         margin-left: -50px; 
       }
-      .btn-background {background-color:#80ff80;}
+      .btn-background {background-color:#33cc33;}
+      body{
+        background-size:100% auto;
+      }
+      .btn-primary-outline {
+        background-color: transparent;
+        border-color: #ccc;
+      }
   </style>
 </head>
-<body style="background-color:#ffffff;">
+{% load static %}
+<body style="background-color:#ffffff;" background="{% static 'cheers.jpg' %}">
 
-  <h2 class="text-center"><font face="palatino"><b>Pick and Check Winning Numbers</b></font></h2>
+  <h2 class="text-center"><font face="palatino" color="white"><b>Choose a game</b></font></h2>
+  </br>
 
   <div class="container-fluid">
-  	<a href="{% url 'powerball_option' %}" class="btn btn-default btn-lg btn-block">
+  	<a href="{% url 'powerball_option' %}" class="btn btn-default btn-lg btn-block btn-primary-outline">
   		{% load static %}
     		<input type="image" src="{% static 'pb-pp.png' %}" name="saveForm" class="img-responsive center-block" id="powerballLogo" width="230px"/>
   	</a>
@@ -40,7 +49,7 @@
   <br/>
 
   <div class="container-fluid">
-    <a href="{% url 'megamillions_option' %}" class="btn btn-default btn-lg btn-block">
+    <a href="{% url 'megamillions_option' %}" class="btn btn-default btn-lg btn-block btn-primary-outline">
       {% load static %}
         <input type="image" src="{% static 'mm_logo.png' %}" name="saveForm" class="img-responsive center-block" id="mmLogo" width="350px"/>
     </a>
@@ -55,7 +64,12 @@
 
   <div class="outside">
     <div class="inside" alight="center">
-      <a href="{% url 'donate' %}"><button type="button" class="btn btn-default btn-lg btn-background">Donate</button></a>
+      <a href="{% url 'donate' %}" class="btn btn-default btn-lg btn-background">
+        <span class="glyphicon glyphicon-usd"></span>
+        <span class="glyphicon glyphicon-usd"></span>
+        <span class="glyphicon glyphicon-usd"></span>
+        <!-- <button type="button" class="btn btn-default btn-lg btn-background">Donate</button> -->
+      </a>
     </div>
   </div>
 
