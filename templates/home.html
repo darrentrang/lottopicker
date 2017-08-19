@@ -27,7 +27,7 @@
       body{
         height: 100%;
         background-position: center;
-        background-repeat: no-repeat;
+        /*background-repeat: no-repeat;*/
         background-size: cover;
       }
       .btn-primary-outline {
@@ -63,16 +63,25 @@
   <br/>
   <br/>
   <br/>
+  <br/>
+  <br/>
+  <br/>
 
+  <div align="center">
+    <a href="{% url 'donate' %}" class="btn btn-default btn-lg btn-background">
+          <span class="glyphicon glyphicon-usd"></span>
+          <span class="glyphicon glyphicon-usd"></span>
+          <span class="glyphicon glyphicon-usd"></span>
+    </a>
+  </div>
 
   <div class="outside">
-    <div class="inside" alight="center">
-      <a href="{% url 'donate' %}" class="btn btn-default btn-lg btn-background">
+    <div class="inside" align="center">
+      <!--<a href="{% url 'donate' %}" class="btn btn-default btn-lg btn-background">
         <span class="glyphicon glyphicon-usd"></span>
         <span class="glyphicon glyphicon-usd"></span>
         <span class="glyphicon glyphicon-usd"></span>
-        <!-- <button type="button" class="btn btn-default btn-lg btn-background">Donate</button> -->
-      </a>
+      </a> -->
     </div>
   </div>
 
