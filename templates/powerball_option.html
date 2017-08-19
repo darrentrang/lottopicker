@@ -7,6 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
+		.btn-background {background-color:#cc8800;}
 		p1 {
 			position: absolute;
 			top: 10px;
@@ -16,35 +17,35 @@
 		}
 		p2 {
 			position: absolute;
-			top: 70px;
+			top: 77px;
 			left: 0px;
 			font-size: 25px;
 			width: 100%;
 		}
 		p3 {
 			position: absolute;
-			top: 130px;
+			top: 144px;
 			left: 0px;
 			font-size: 25px;
 			width: 100%;
 		}
 		p4 {
 			position: absolute;
-			top: 190px;
+			top: 211px;
 			left: 0px;
 			font-size: 25px;
 			width: 100%;
 		}
 		p5 {
 			position: absolute;
-			top: 250px;
+			top: 278px;
 			left: 0px;
 			font-size: 25px;
 			width: 100%;
 		}
 		p6 {
 			position: absolute;
-			top: 310px;
+			top: 345px;
 			left: 0px;
 			font-size: 25px;
 			width: 100%;
@@ -57,13 +58,21 @@
 		    color: #FFFFFF;
 		    text-decoration: none;
 		}
+		body{
+	        height: 100%;
+	        background-position: center;
+	        /*background-repeat: no-repeat;*/
+	        background-size: cover;
+	    }
+	    
 	</style>
 </head>
-<body style="background-color:#FFFFFF;">  
+{% load static %}
+<body style="background-color:#FFFFFF;" background="{% static 'beach.jpg' %}">  
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
-			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" width="60px"/>
+			<img src="{% static 'white_ball.png' %}" class="img-responsive" alt="" width="60px"/>
 			<p1 align="center">{{regs.0}}</p1>
 		</div>	
 	</div>
@@ -71,7 +80,7 @@
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
-			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" width="60px" />
+			<img src="{% static 'white_ball.png' %}" class="img-responsive" alt="" width="60px" />
 			<p2 align="center">{{regs.1}}</p2>
 		</div>	
 	</div>
@@ -79,7 +88,7 @@
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
-			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" width="60px"/>
+			<img src="{% static 'white_ball.png' %}" class="img-responsive" alt="" width="60px"/>
 			<p3 align="center">{{regs.2}}</p3>
 		</div>	
 	</div>
@@ -87,7 +96,7 @@
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
-			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" width="60px"/>
+			<img src="{% static 'white_ball.png' %}" class="img-responsive" alt="" width="60px"/>
 			<p4 align="center">{{regs.3}}</p4>
 		</div>	
 	</div>
@@ -95,7 +104,7 @@
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
-			<img src="{% static 'ball_white.gif' %}" class="img-responsive" alt="" width="60px"/>
+			<img src="{% static 'white_ball.png' %}" class="img-responsive" alt="" width="60px"/>
 			<p5 align="center">{{regs.4}}</p5>
 		</div>	
 	</div>
@@ -103,7 +112,7 @@
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
-			<img src="{% static 'ball_red.gif' %}" class="img-responsive" alt="" width="60px"/>
+			<img src="{% static 'red_ball.png' %}" class="img-responsive" alt="" width="93px"/>
 			<p6 align="center">{{pb}}</p6>
 		</div>	
 	</div>
@@ -126,7 +135,7 @@
 
 	<div class="row">
 		<div align="center">
-			<a href="http://www.powerball.com/pb_home.asp"><button type="button" class="btn btn-success btn-lg">Check Previous Winning Numbers</button></a>
+			<a href="http://www.powerball.com/pb_home.asp"><button type="button" class="btn btn-basic btn-lg btn-background">Check Previous Winning Numbers</button></a>
 		</div>
 	</div>
 	

@@ -57,11 +57,18 @@
 		    color: #FFFFFF;
 		    text-decoration: none;
 		}
-		.btn-background {background-color:#0099ff;}
+		.btn-background {background-color:#669900;}
 		.btn-font-color {color:#000000;}
+		body{
+	        height: 100%;
+	        background-position: center;
+	        /*background-repeat: no-repeat;*/
+	        background-size: cover;
+	    }
 	</style>
 </head>
-<body style="background-color:#FFFFFF;">  
+{% load static %}
+<body style="background-color:#FFFFFF;" background="{% static 'money.jpg' %}">  
 	<div class="image-responsive">
 		<div id="inner">
 			{% load static %}
